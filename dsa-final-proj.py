@@ -28,7 +28,7 @@ class Play_4096(Tk):
         self.button_frame.pack(side="top")
 
         Label(self.button_frame, text="Score:", font=("times new roman", 15)).grid(row=0, column=1)
-        Label(self.button_frame, textvariable=self.game_score, font=("times new roman", 15)).grid(row=0, column=2,)
+        Label(self.button_frame, textvariable=self.game_score, font=("times new roman", 15)).grid(row=0, column=2)
         Label(self.button_frame, text="Record:", font=("times new roman", 15)).grid(row=0, column=3)
         Label(self.button_frame, textvariable=self.highest_score, font=("times new roman", 15)).grid(row=0, column=4)
 
@@ -99,8 +99,8 @@ class Play_4096(Tk):
 
     # ==== show board number
     def show_number(self, row, column, a, b, c, d, num):
-        bg_color = {'2': '#eee4da', '4': '#ede0c8', '8': '#edc850', '16': '#edc53f', '32': '#f67c5f', '64': '#f65e3b', '128': '#edcf72', '256': '#edcc61', '512': '#f2b179', '1024': '#f59563', '2048': '#edc22e','4096': '#000000',}
-        color = {'2': '#776e65', '4': '#f9f6f2', '8': '#f9f6f2', '16': '#f9f6f2', '32': '#f9f6f2', '64': '#f9f6f2', '128': '#f9f6f2', '256': '#f9f6f2', '512': '#776e65', '1024': '#f9f6f2', '2048': '#f9f6f2','4096': '#f9f6f2', }
+        bg_color = {'2': '#f1dbbf', '4': '#e8d2a6', '8': '#c27664', '16': '#84d2c5', '32': '#698269', '64': '#86a3B8', '128': '#f48484', '256': '#b05a7a', '512': '#b08bbb', '1024': '#1F8a70', '2048': '#00425a','4096': '#20262e',}
+        color = {'2': '#8d9693', '4': '#f9f6f2', '8': '#f9f6f2', '16': '#f9f6f2', '32': '#f9f6f2', '64': '#f9f6f2', '128': '#f9f6f2', '256': '#f9f6f2', '512': '#776e65', '1024': '#f9f6f2', '2048': '#f9f6f2','4096': '#f9f6f2', }
         self.square[row, column] = self.canvas.create_rectangle(a, b, c, d, fill=bg_color[str(num)], tags="rect", outline="")
         self.canvas.create_text((a + c) / 2, (b + d) / 2, font=("Arial", 36), fill=color[str(num)], text=str(num))
 
